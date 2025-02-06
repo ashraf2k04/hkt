@@ -24,8 +24,10 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.progress.photos.hkt.screens.AboutUsScreen
 import com.progress.photos.hkt.screens.HomeScreen
+import com.progress.photos.hkt.screens.ListScreen
 import com.progress.photos.hkt.screens.MyHKTScreen
 import com.progress.photos.hkt.screens.PrivacyScreen
+import com.progress.photos.hkt.screens.Screens
 import com.progress.photos.hkt.ui.theme.HKTTheme
 import kotlinx.coroutines.launch
 
@@ -71,23 +73,26 @@ fun Drawer(){
             }
         },
         drawerState = drawerState
-        ) {
-            NavHost(navController = navController, startDestination = Screens.HomeScreen.route) {
-                composable(Screens.HomeScreen.route){
-                    HomeScreen(drawerState)
-                }
-                composable(Screens.MyHKTScreen.route){
-                    MyHKTScreen()
-                }
-                composable(Screens.AboutUsScreen.route){
-                    AboutUsScreen()
-                }
-                composable(Screens.PrivacyScreen.route){
-                    PrivacyScreen()
-                }
+    ){
+        NavHost(navController = navController, startDestination = Screens.HomeScreen.route) {
+            composable(Screens.HomeScreen.route){
+                HomeScreen(drawerState)
+            }
+            composable(Screens.MyHKTScreen.route){
+                MyHKTScreen()
+            }
+            composable(Screens.AboutUsScreen.route){
+                AboutUsScreen()
+            }
+            composable(Screens.PrivacyScreen.route){
+                PrivacyScreen()
+            }
+            composable(Screens.ListScreen.route){
+                ListScreen()
             }
         }
     }
+}
 
 
 

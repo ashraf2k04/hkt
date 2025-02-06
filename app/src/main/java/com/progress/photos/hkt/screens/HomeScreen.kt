@@ -43,6 +43,7 @@ fun HomeScreen(drawerState: DrawerState) {
     Column(modifier = Modifier.fillMaxSize().verticalScroll(state = scrollState, enabled = true )){
 
         Box(modifier = Modifier.fillMaxWidth()){
+
             Image(
                 painter = painterResource(R.drawable.homeimage),
                 contentScale = ContentScale.Crop,

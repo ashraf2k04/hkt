@@ -13,7 +13,7 @@ import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.PrivacyTip
 import androidx.compose.material.icons.filled.SupervisorAccount
-import androidx.compose.material.icons.outlined.Bookmark
+import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.PrivacyTip
 import androidx.compose.material.icons.outlined.SupervisorAccount
@@ -27,6 +27,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.progress.photos.hkt.screens.Screens
 
 data class SideBarItems(
     val pageName: String,
@@ -40,7 +41,7 @@ data class SideBarItems(
 
 val items : List<SideBarItems>  = listOf(
     SideBarItems("Home", Screens.HomeScreen.route, Icons.Filled.Home, Icons.Outlined.Home, isSelected = true),
-    SideBarItems("MyHKT", Screens.MyHKTScreen.route, Icons.Filled.Bookmark, Icons.Outlined.Bookmark, isSelected = false),
+    SideBarItems("MyHKT", Screens.MyHKTScreen.route, Icons.Filled.Bookmark, Icons.Outlined.BookmarkBorder, isSelected = false),
     SideBarItems("About Us", Screens.AboutUsScreen.route, Icons.Filled.SupervisorAccount, Icons.Outlined.SupervisorAccount, isSelected = false),
     SideBarItems("Privacy", Screens.PrivacyScreen.route, Icons.Filled.PrivacyTip, Icons.Outlined.PrivacyTip, isSelected = false)
 )
